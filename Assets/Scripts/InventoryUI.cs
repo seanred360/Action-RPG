@@ -2,47 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryUI : MonoBehaviour
+namespace Roundbeargames
 {
-    public Transform itemsParent;
-    public GameObject inventoryUI;
-
-    Inventory inventory;
-
-    InventorySlot[] slots;
-
-    // Start is called before the first frame update
-    void Start()
+    public class InventoryUI : MonoBehaviour
     {
-        inventory = Inventory.instance;
-        inventory.onItemChangedCallback += UpdateUI;
+        public Transform itemsParent;
+        public GameObject inventoryUI;
 
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
-    }
+        Inventory inventory;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (InputManager.instance.inputEnabled)
-        //{
-        //    //if (Input.GetButtonDown("Inventory"))
-        //    //{
-        //    //    inventoryUI.SetActive(!inventoryUI.activeSelf);
-        //    //}
-        //}  
-    }
+        InventorySlot[] slots;
 
-    void UpdateUI()
-    {
-        for(int i = 0; i < slots.Length; i++)
+        // Start is called before the first frame update
+        void Start()
         {
-            if (i < inventory.items.Count)
+            inventory = Inventory.instance;
+            inventory.onItemChangedCallback += UpdateUI;
+
+            slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (InputHandler.Instance.inventoryFlag)
             {
-                slots[i].AddItem(inventory.items[i]);
-            } else
+                inventoryUI.SetActive(!inventoryUI.activeSelf);
+            }
+        }
+
+        void UpdateUI()
+        {
+            for (int i = 0; i < slots.Length; i++)
             {
-                slots[i].ClearSlot();
+                if (i < inventory.items.Count)
+                {
+                    slots[i].AddItem(inventory.items[i]);
+                } else
+                {
+                    slots[i].ClearSlot();
+                }
             }
         }
     }
 }
+

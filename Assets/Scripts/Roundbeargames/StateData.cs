@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace SG
+namespace Roundbeargames
 {
     public abstract class StateData : ScriptableObject
     {

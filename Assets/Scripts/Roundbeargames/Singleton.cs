@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SG
+namespace Roundbeargames
 {
     public class Singleton<T> : MonoBehaviour where T: MonoBehaviour
     {

@@ -36,12 +36,12 @@ public class CharacterCombat : MonoBehaviour
         }
     }
 
-    protected virtual void OpenWeaponColliderAnimationEvent()
+    public virtual void OpenWeaponColliderAnimationEvent()
     {
         EquipmentManager.instance.weaponCollider.EnableDamageCollider();
     }
 
-    protected virtual void AttackHitAnimationEvent()
+    public virtual void AttackHitAnimationEvent()
     {
         currentWeapon = EquipmentManager.instance.weaponCollider;
         foreach (Collider hitEnemy in currentWeapon.hitEnemies)

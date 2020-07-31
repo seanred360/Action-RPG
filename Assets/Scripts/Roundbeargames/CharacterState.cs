@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SG
+namespace Roundbeargames
 {
     public class CharacterState : StateMachineBehaviour
     {

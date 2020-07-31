@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class EnemyCombat : CharacterCombat
 {
-    protected override void OpenWeaponColliderAnimationEvent()
+    public override void OpenWeaponColliderAnimationEvent()
     {
         currentWeapon.EnableDamageCollider();
     }
 
-    protected override void AttackHitAnimationEvent()
+    public override void AttackHitAnimationEvent()
     {
         //Collider[] hitEnemies = Physics.OverlapSphere(myAttackPoint.position, attackRange, enemyLayers);
         //foreach (Collider enemy in hitEnemies)
