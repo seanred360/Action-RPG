@@ -7,12 +7,12 @@ public enum PlayerState
     walk,attack,interact
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerOld : MonoBehaviour
 {
 
     #region Singleton
 
-    public static PlayerController instance;
+    public static PlayerControllerOld instance;
 
     private void Awake()
     {

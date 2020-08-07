@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Roundbeargames
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         //InputHandler inputHandler;
         //CameraHandler cameraHandler;
@@ -25,7 +25,7 @@ namespace Roundbeargames
         public Transform myTransform;
         public Transform cameraObject;
         public Rigidbody rigidbody;
-        public PlayerManager playerManager;
+        public PlayerController playerManager;
         public Animator anim;
         public CharacterController characterController;
 
@@ -41,7 +41,7 @@ namespace Roundbeargames
             myTransform = transform;
             cameraObject = Camera.main.transform;
             rigidbody = GetComponent<Rigidbody>();
-            playerManager = GetComponent<PlayerManager>();
+            playerManager = GetComponent<PlayerController>();
             characterController = GetComponent<CharacterController>();
 
             anim = GetComponentInChildren<Animator>();

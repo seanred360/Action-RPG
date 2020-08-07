@@ -8,7 +8,7 @@ namespace Roundbeargames
     public class Attack : StateData
     {
 
-        PlayerManager playerManager;
+        PlayerController playerManager;
         Transform myTransform;
         Transform cameraObject;
         Rigidbody rigidbody;

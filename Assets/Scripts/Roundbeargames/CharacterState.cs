@@ -40,12 +40,12 @@ namespace Roundbeargames
             }
         }
 
-        PlayerManager playerManager;
-        public PlayerManager GetPlayerManager(Animator animator)
+        PlayerController playerManager;
+        public PlayerController GetPlayerManager(Animator animator)
         {
             if (playerManager == null)
             {
-                playerManager = animator.GetComponentInParent<PlayerManager>();
+                playerManager = animator.GetComponentInParent<PlayerController>();
             }
             return playerManager;
         }

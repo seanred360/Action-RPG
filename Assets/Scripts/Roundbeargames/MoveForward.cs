@@ -8,7 +8,7 @@ namespace Roundbeargames
     public class MoveForward : StateData
     {
 
-        PlayerManager playerManager;
+        PlayerController playerManager;
         Transform myTransform;
         Transform cameraObject;
         Rigidbody rigidbody;
